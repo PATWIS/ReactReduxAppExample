@@ -1,0 +1,15 @@
+.ui.menu .item img.logo {
+  margin-right: 1.5em;
+}
+
+.main.container {
+  margin-top: 5em;
+}
+
+ul {
+  padding: 0;
+}
+ul.list .item {
+  margin: 20px;
+  list-style-type: none;
+}

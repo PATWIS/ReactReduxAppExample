@@ -1,20 +1,15 @@
 import React from "react";
-import { render } from "react-dom";
-import Hello from "./Hello";
+import ReactDOM from "react-dom";
+import { store } from "./store";
+import { Provider } from "react-redux";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Button } from "reactstrap";
+import "./index.css";
 
-const styles = {
-  fontFamily: "sans-serif",
-  textAlign: "center"
-};
+import { AppContainer } from "./components/App";
 
-const App = () => (
-  <div style={styles}>
-    <Hello name="CodeSandbox" />
-    <Button color="danger">Danger!</Button>
-    <h2>Start editing to see some magic happen {"\u2728"}</h2>
-  </div>
+ReactDOM.render(
+  <Provider store={store}>
+    <AppContainer />
+  </Provider>,
+  document.getElementById("root")
 );
-
-render(<App />, document.getElementById("root"));
